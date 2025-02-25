@@ -1,17 +1,17 @@
 layers:
   mac-base:
-  - $$mdi:keyboard-esc$$
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '9'
+  - {t: '$$mdi:keyboard-esc$$', h: SP&Fn}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - PLAY
+  - {t: '6', s: ^}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:keyboard-tab$$
   - Q
@@ -19,7 +19,7 @@ layers:
   - E
   - R
   - T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Sft+Gui+2
   - Y
   - U
   - I
@@ -32,38 +32,38 @@ layers:
   - D
   - F
   - G
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PREVIOUS
   - H
   - J
   - K
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - Alt+Ctl+$$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - Z
   - X
   - C
   - V
   - B
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:skip-next$$
   - N
-  - M
   - {t: ',', s: <}
   - .
-  - {t: '-', s: _}
-  - Ctl+AltGr+$$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-command$$
+  - {t: \, s: '|'}
+  - {t: /, s: '?'}
+  - $$mdi:apple-keyboard-shift$$
+  - LEF GUI
   - $$mdi:apple-keyboard-option$$
-  - CTRL
+  - $$mdi:apple-keyboard-control$$
   - win-base
-  - {t: '$$mdi:keyboard-return$$', h: SP&Fn}
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - 4 ENTER
+  - $$mdi:keyboard-space$$
   - '2'
-  - '&CTRL'
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '`', s: '~'}
+  - {t: \, s: '|'}
   win-base:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
@@ -260,7 +260,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   SP&Fn:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -316,7 +316,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - RGB TOG
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
