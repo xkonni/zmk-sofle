@@ -69,14 +69,14 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   Å   |
 // | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   Ö   |   Ä   |
 // | LCTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+//               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
 &kp ESCAPE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5         &mmv MOVE_Y(-600)  &kp NUMBER_6  &kp N7        &kp N8             &kp N9        &kp N0         &kp BACKSPACE
 &kp TAB          &kp Q         &kp W         &kp E           &kp R         &kp T          &mmv MOVE_Y(600)   &kp Y         &kp U         &kp I              &kp O         &kp P          &kp LBKT
 &kp LEFT_SHIFT   &kp A         &kp S         &kp D           &kp F         &kp G          &mmv MOVE_X(-600)  &kp H         &kp J         &kp K              &kp L         &kp SEMICOLON  &kp SQT
 &kp LCTRL        &kp Z         &kp X         &kp C           &kp V         &kp B          &mmv MOVE_X(600)   &kp N         &kp M         &kp COMMA          &kp PERIOD    &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo 1         &kp ENTER      &mkp LCLK    	     &lt 2 SPACE   &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  &kp BACKSLASH
+&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo 1         &lt 2 SPACE    &mkp LCLK    	     &kp ENTER     &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  &kp BACKSLASH
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -120,40 +120,5 @@
             >;
         };
 
-        layer_3 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&none            &none  &none     &none         &none              &none                   &rgb_ug RGB_HUD  &none                  &none          &none    &none    &none    &none
-&none            &none  &none     &kp UP_ARROW  &kp DOUBLE_QUOTES  &kp LEFT_BRACE          &bt BT_CLR       &kp RIGHT_BRACE        &kp F9         &kp F10  &kp F11  &kp F12  &none
-&none            &none  &kp LEFT  &kp DOWN      &kp RIGHT          &kp LEFT_PARENTHESIS    &bt BT_PRV       &kp RIGHT_PARENTHESIS  &kp F5         &kp F6   &kp F7   &kp F8   &none
-&none            &none  &none     &none         &none              &kp LEFT_BRACKET        &bt BT_NXT       &kp RIGHT_BRACKET      &kp F1         &kp F2   &kp F3   &kp F4   &none
-&kp LG(LS(F14))  &none  &none     &none         &none              &none                   &rgb_ug RGB_TOG  &none                  &kp BACKSPACE  &none    &none    &none
-            >;
-
-            sensor-bindings = <&inc_dec_kp LA(LG(F13)) RG(F13)>;
-            label = "SP&Fn";
-        };
-
-        layer_5 {
-            bindings = <
-&none                 &none  &none            &none            &none            &kp TAB             &none  &kp TAB           &none            &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp SLASH     &none
-&kp LS(LC(LEFT_ALT))  &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SLASH)       &none  &kp LS(N5)        &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9   &kp ASTERISK  &none
-&none                 &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(NUMBER_1)    &none  &kp LS(N7)        &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6   &kp MINUS     &none
-&kp LS(LEFT_ALT)      &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LS(NUMBER_2)    &none  &kp LS(NUMBER_3)  &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PLUS      &none
-&none                 &none  &none            &kp KP_NUMBER_0  &kp SPACE        &kp RETURN          &none  &kp ESCAPE        &kp BACKSPACE    &kp KP_NUMBER_0   &none             &kp KP_DOT
-            >;
-
-            label = "number";
-            sensor-bindings = <&scroll_encoder>;
-        } ;
     };
 };
