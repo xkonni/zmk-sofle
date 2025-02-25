@@ -52,7 +52,7 @@ layers:
   - {t: \, s: '|'}
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
-  - LEF GUI
+  - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
   - win-base
