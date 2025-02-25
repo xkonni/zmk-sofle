@@ -54,7 +54,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-control$$
+  - CTRL
   - win-base
   - 4 ENTER
   - $$mdi:keyboard-space$$
