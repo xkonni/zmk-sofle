@@ -76,8 +76,8 @@
 &kp TAB          &kp Q         &kp W         &kp E           &kp R         &kp T          &mmv MOVE_Y(600)   &kp Y         &kp U            &kp I              &kp O       &kp P          &kp LBKT
 &kp LEFT_SHIFT   &kp A         &kp S         &kp D           &kp F         &kp G          &mmv MOVE_X(-600)  &kp H         &kp J            &kp K              &kp L       &kp SEMICOLON  &kp SQT
 &kp LCTRL        &kp Z         &kp X         &kp C           &kp V         &kp B          &mmv MOVE_X(600)   &kp N         &kp M            &kp COMMA          &kp PERIOD  &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo 1         &kp ENTER      &kp SPACE    	     &mo 2         &to 0            &lt 2 BACKSPACE    &kp RIGHT_CONTROL  &kp GRAVE   &kp BACKSLASH
-			
+&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo layer_1   &kp ENTER      &mkp LCLK    	     &mo layer_2   &kp SPACE        &lt 2 BACKSPACE    &kp RIGHT_CONTROL  &kp GRAVE   &kp BACKSLASH
+
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
