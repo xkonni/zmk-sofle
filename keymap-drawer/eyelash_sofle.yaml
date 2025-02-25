@@ -58,7 +58,7 @@ layers:
   - win-base
   - {t: '$$mdi:keyboard-return$$', h: SP&Fn}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&mo2'
+  - '2'
   - '&CTRL'
   - $$mdi:apple-keyboard-option$$
   - RIGHT GUI
@@ -188,7 +188,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
