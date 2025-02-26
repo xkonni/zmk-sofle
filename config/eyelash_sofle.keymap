@@ -50,7 +50,6 @@
 
     SandS: SandS {
         compatible = "zmk,behavior-hold-tap";
-        label = "SANDS";
         bindings = <&kp>, <&kp>;
 
         #binding-cells = <2>;
