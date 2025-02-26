@@ -72,32 +72,32 @@
 //               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5         &mmv MOVE_Y(-600)  &kp NUMBER_6  &kp N7        &kp N8             &kp N9        &kp N0         &kp BACKSPACE
+&kp ESCAPE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5         &mmv MOVE_Y(-600)  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp N9        &kp N0         &kp BACKSPACE
 &kp TAB          &kp Q         &kp W         &kp E           &kp R         &kp T          &mmv MOVE_Y(600)   &kp Y         &kp U         &kp I              &kp O         &kp P          &kp LBKT
 &kp LEFT_SHIFT   &kp A         &kp S         &kp D           &kp F         &kp G          &mmv MOVE_X(-600)  &kp H         &kp J         &kp K              &kp L         &kp SEMICOLON  &kp SQT
 &kp LCTRL        &kp Z         &kp X         &kp C           &kp V         &kp B          &mmv MOVE_X(600)   &kp N         &kp M         &kp COMMA          &kp PERIOD    &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo 1         &lt 2 SPACE    &mkp LCLK    	     &kp ENTER     &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  &kp BACKSLASH
+&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp GRAVE       &mo 1         &lt 2 SPACE    &mkp LCLK    	     &kp RETURN    &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  &kp BACKSLASH
 			>;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "mac-base";
-        };
+        };`
 
         layer_1 {
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  F12  |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  {   |   }   |  [    |  ]   |   +   |   '   |
+// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |  *    |  (   |   )   |   \   |
+// |       |     |  +  |  `   |  ?   |      |        |  |       |      |   -   |  <    |  >   |   |   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
 
             display-name = "win-base";
             bindings = <
-&trans                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &mmv MOVE_Y(-600)     &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10               &kp F11
-&kp GRAVE               &kp 1         &kp 2         &kp 3           &kp 4                  &kp 5            &mmv MOVE_Y(600)      &kp 6              &kp 7              &kp 8                 &kp 9                  &kp 0                 &kp F12
-&trans                  &kp EXCL      &kp AT        &kp HASH        &kp DLLR               &kp PRCNT        &mmv MOVE_X(-600)     &kp CARET          &kp ASTRK          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE              &trans
-&trans 	 				&kp EQUAL     &kp MINUS     &kp PLUS        &kp LEFT_BRACE         &kp RIGHT_BRACE  &mmv MOVE_X(600)      &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp SQT               &kp EQUAL              &kp NON_US_BACKSLASH  &trans
-&trans                  &trans        &trans        &trans          &trans                 &trans           &mkp LCLK             &trans             &trans             &trans                &trans                 &trans                &trans
+&none                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY     		 &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp F11
+&kp GRAVE              &kp N1        &kp N2        &kp N3          &kp N4                 &kp N5           &kp LS(LG(NUMBER_2)   &kp LEFT_BRACE     &kp RIGHT_BRACE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS               &kp SQT
+&none                  &kp EXCL      &kp AT_SIGN   &kp HASH        &kp DLLR               &kp PRCNT        &kp C_PREVIOUS        &kp CARET          &kp AMPS           &kp KP_MULTIPLY       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&none 	 			   &none         &kp PLUS      &kp GRAVE       &kp QMARK              &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp PIPE 2             &trans
+&trans                 &trans        &trans        &trans          &trans                 &trans           &none                 &trans             &trans             &trans                &trans                 &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
