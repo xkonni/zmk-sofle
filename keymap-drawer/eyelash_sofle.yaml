@@ -105,7 +105,7 @@ layers:
   - KP RPAR
   - {t: \, s: '|'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&KP_EQUAL'
+  - KP EQUAL
   - KP PLUS
   - {t: '`', s: '~'}
   - '?'
