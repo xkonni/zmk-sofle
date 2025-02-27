@@ -104,19 +104,20 @@
         };
 		
         layer_2 {
+	//INS, REDO,UNDO,CUT,COPY,PASTE funkar ej
 // ------------------------------------------------------------------------------------------------------------
-// |       |      |      |       |       |      |                |      |      |       |      |       |       |
+// | BTCLR | BT1  | BT2  |  BT3  |  BT4  | BT5  |                |      |      |       |      |       |       |
 // |       | INS  | PSCR |   £   |       |      |                | PGUP |      |   ^   |      |       |   ?   |
 // |       | REDO | CAPS |   €   |       |      |                | PGDN |   <- |   v   |  ->  |       |   \   |
 // |       | UNDO |  CUT | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans      &trans     &trans       &trans     &trans       &trans  &trans     &trans            &trans          &trans           &trans  &trans
-&trans  &kp INSERT  &kp PSCRN  &kp SE_PND   &trans     &trans       &trans  &kp PG_UP  &trans            &kp UP_ARROW    &trans           &trans  &kp SE_QUES
-&trans  &kp K_REDO  &kp CAPS   &kp SE_EUR   &trans     &trans       &trans  &kp PG_DN  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp SE_BSLS
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_CUT  &kp K_PASTE  &trans  &trans     &trans            &trans          &trans           &trans  &trans
-&trans  &trans      &trans     &trans       &trans     &trans       &trans  &trans     &trans            &trans          &trans           &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4    &trans     &trans       &trans            &trans          &trans           &trans   &trans
+&trans       &kp INSERT    &kp PSCRN      &kp SE_PND     &trans         &trans          &trans     &kp PG_UP    &trans            &kp UP_ARROW    &trans           &trans   &kp SE_QUES
+&trans       &kp K_REDO    &kp CAPS       &kp SE_EUR     &trans         &trans          &trans     &kp PG_DN    &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &kp SE_BSLS
+&trans       &kp K_UNDO    &kp K_CUT      &kp K_COPY     &kp K_CUT      &kp K_PASTE     &trans     &trans       &trans            &trans          &trans           &trans   &trans
+&trans       &trans        &trans         &trans         &trans         &trans          &trans     &trans       &trans            &trans          &trans           &trans
             >;
         };
     };
