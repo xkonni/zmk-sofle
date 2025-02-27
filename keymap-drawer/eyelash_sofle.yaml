@@ -55,7 +55,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:printer-outline$$
+  - $$mdi:apple-keyboard-control$$
   - win-base
   - {t: '$$mdi:keyboard-space$$', h: '2'}
   - $$mdi:mouse-left-click-outline$$
@@ -101,12 +101,12 @@ layers:
   - ^
   - '&'
   - KP MULTIPLY
-  - (
-  - )
+  - KP LPAR
+  - KP RPAR
   - {t: \, s: '|'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - +
+  - KP PLUS
   - {t: '`', s: '~'}
   - '?'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -115,7 +115,7 @@ layers:
   - _
   - <
   - .
-  - '|'
+  - \
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
