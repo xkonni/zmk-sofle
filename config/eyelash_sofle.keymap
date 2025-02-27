@@ -82,7 +82,7 @@
 &none            &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY     	   &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp DELETE
 &kp GRAVE        &kp N1        &kp N2        &kp N3          &kp N4                 &kp N5           &kp LS(LG(NUMBER_2))  &kp SE_LCBR        &kp SE_RCBR        &kp SE_LBRC           &kp SE_RBRC            &kp PLUS               &kp SQT
 &none            &kp EXCL      &kp SE_AT     &kp POUND       &kp SE_DLR             &kp PERCENT      &kp C_PREVIOUS        &kp CARET          &kp AMPS           &kp KP_MULTIPLY       &kp KP_LPAR            &kp KP_RPAR            &kp BACKSLASH
-&none 	 	     &kp KP_EQUAL  &kp KP_PLUS   &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp SE_PIPE            &trans
+&none 	 	     &kp KP_EQUAL  &kp KP_PLUS   &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &kp UNDER          &kp SE_LABK        &kp SE_RABK           &kp SE_PIPE            &trans                 &trans
 &trans           &trans        &trans        &trans          &trans                 &trans           &none                 &trans             &trans             &trans                &trans                 &trans                 
             >;
 
@@ -91,11 +91,11 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp UP_ARROW  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans            &kp UP_ARROW    &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans          &trans
             >;
         };
 
