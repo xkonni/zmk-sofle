@@ -50,9 +50,10 @@
 
     SandS: SandS {
         compatible = "zmk,behavior-hold-tap";
+        label = "SANDS";
         bindings = <&kp>, <&kp>;
-		
-		#binding-cells = <2>;
+
+        #binding-cells = <2>;
         tapping-term-ms = <200>;
         flavor = "hold-preferred";
         retro-tap;
@@ -62,54 +63,32 @@
         compatible = "zmk,keymap";
 
         layer_0 {
-		
-// ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   | BKSPC |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   Å   |
-// | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   Ö   |   Ä   |
-// | LCTRL |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
-
             bindings = <
-&kp ESCAPE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5         &mmv MOVE_Y(-600)  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp N9        &kp N0         &kp BACKSPACE
-&kp TAB          &kp Q         &kp W         &kp E           &kp R         &kp T          &mmv MOVE_Y(600)   &kp Y         &kp U         &kp I              &kp O         &kp P          &kp LBKT
-&kp LEFT_SHIFT   &kp A         &kp S         &kp D           &kp F         &kp G          &mmv MOVE_X(-600)  &kp H         &kp J         &kp K              &kp L         &kp SEMICOLON  &kp SQT
-&kp LCTRL        &kp Z         &kp X         &kp C           &kp V         &kp B          &mmv MOVE_X(600)   &kp N         &kp M         &kp COMMA          &kp PERIOD    &kp FSLH       &kp RIGHT_SHIFT
-&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp PSCRN       &mo 1         &lt 2 SPACE    &mkp LCLK    	     &kp RETURN    &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  
-			>;
+&none              &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_GUI             &kp TAB        &kp C_PLAY            &kp TAB        &kp RIGHT_GUI                 &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp DELETE
+&none              &kp F         &kp P      &kp D           &kp L                    &kp X          &kp LS(LG(NUMBER_2))  &kp SEMICOLON  &kp U                         &kp O            &kp Y      &kp Q          &none
+&mo 5              &kp S         &kp N      &kp T           &kp H                    &kp K          &kp C_PREVIOUS        &kp COMMA      &kp A                         &kp E            &kp I      &kp C          &mo 5
+&kp LA(LC(LSHFT))  &kp V         &kp W      &kp G           &kp M                    &kp J          &kp C_NEXT            &kp MINUS      &kp PERIOD                    &kp SQT          &kp EQUAL  &kp FSLH       &kp RC(RA(RIGHT_SHIFT))
+&kp C_MUTE         &none         &kp Z      &kp R           &SandS LEFT_SHIFT SPACE  &lt 4 ENTER    &to 1                 &lt 4 ESCAPE   &SandS RIGHT_SHIFT BACKSPACE  &kp B            &kp GRAVE  &kp BACKSLASH
+            >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "mac-base";
         };
 
         layer_1 {
-// ------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  {   |   }   |  [    |  ]   |   +   |   '   |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |  *    |  (   |   )   |   \   |
-// |       |     |  +  |  `   |  ?   |      |        |  |       |      |   -   |  <    |  >   |   |   |       |
-//               |     |      |      |      |        |  |       |      |       |       |      |
-
             display-name = "win-base";
             bindings = <
-&none                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY            &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp F11
-&kp GRAVE              &kp N1        &kp N2        &kp N3          &kp N4                 &kp N5           &kp LS(LG(NUMBER_2))  &kp LEFT_BRACE     &kp RIGHT_BRACE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS               &kp SQT
-&none                  &kp EXCL      &kp AT_SIGN   &kp POUND       &kp DOLLAR             &kp PERCENT      &kp C_PREVIOUS        &kp CARET          &kp AMPS           &kp KP_MULTIPLY       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&none 	 	       &none         &kp PLUS      &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp PIPE 2             &trans
-&trans                 &trans        &trans        &trans          &trans                 &trans           &none                 &trans             &trans             &trans                &trans                 &trans                 
+&none                   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LCTRL                &kp TAB        &kp C_PLAY            &kp TAB        &kp RCTRL                     &kp RIGHT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp DELETE
+&none                   &kp F         &kp P         &kp D           &kp L                    &kp X          &kp LS(LG(NUMBER_2))  &kp SEMICOLON  &kp U                         &kp O            &kp Y          &kp Q          &none
+&mo 5                   &kp S         &kp N         &kp T           &kp H                    &kp K          &kp C_PREVIOUS        &kp COMMA      &kp A                         &kp E            &kp I          &kp C          &mo 5
+&kp LA(LC(LEFT_SHIFT))  &kp V         &kp W         &kp G           &kp M                    &kp J          &kp C_NEXT            &kp MINUS      &kp PERIOD                    &kp SQT          &kp EQUAL      &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
+&kp C_MUTE              &mkp MB1      &kp Z         &kp R           &SandS LEFT_SHIFT SPACE  &lt 4 ENTER    &to 0                 &lt 4 ESCAPE   &SandS RIGHT_SHIFT BACKSPACE  &kp B            &kp GRAVE      &kp BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_2 {
-// ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |       | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//                |      |       |       |      |      |  |      |      |      |       |      |
-
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -117,7 +96,42 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-        } ;
+        };
 
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&none            &none  &none     &none         &none              &none                   &rgb_ug RGB_HUD  &none                  &none          &none    &none    &none    &none
+&none            &none  &none     &kp UP_ARROW  &kp DOUBLE_QUOTES  &kp LEFT_BRACE          &bt BT_CLR       &kp RIGHT_BRACE        &kp F9         &kp F10  &kp F11  &kp F12  &none
+&none            &none  &kp LEFT  &kp DOWN      &kp RIGHT          &kp LEFT_PARENTHESIS    &bt BT_PRV       &kp RIGHT_PARENTHESIS  &kp F5         &kp F6   &kp F7   &kp F8   &none
+&none            &none  &none     &none         &none              &kp LEFT_BRACKET        &bt BT_NXT       &kp RIGHT_BRACKET      &kp F1         &kp F2   &kp F3   &kp F4   &none
+&kp LG(LS(F14))  &none  &none     &none         &none              &none                   &rgb_ug RGB_TOG  &none                  &kp BACKSPACE  &none    &none    &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp LA(LG(F13)) RG(F13)>;
+            label = "SP&Fn";
+        };
+
+        layer_5 {
+            bindings = <
+&none                 &none  &none            &none            &none            &kp TAB             &none  &kp TAB           &none            &kp LS(NUMBER_4)  &kp LS(NUMBER_6)  &kp SLASH     &none
+&kp LS(LC(LEFT_ALT))  &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SLASH)       &none  &kp LS(N5)        &kp KP_NUMBER_7  &kp KP_NUMBER_8   &kp KP_NUMBER_9   &kp ASTERISK  &none
+&none                 &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LS(NUMBER_1)    &none  &kp LS(N7)        &kp KP_NUMBER_4  &kp KP_NUMBER_5   &kp KP_NUMBER_6   &kp MINUS     &none
+&kp LS(LEFT_ALT)      &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LS(NUMBER_2)    &none  &kp LS(NUMBER_3)  &kp KP_NUMBER_1  &kp KP_NUMBER_2   &kp KP_NUMBER_3   &kp PLUS      &none
+&none                 &none  &none            &kp KP_NUMBER_0  &kp SPACE        &kp RETURN          &none  &kp ESCAPE        &kp BACKSPACE    &kp KP_NUMBER_0   &none             &kp KP_DOT
+            >;
+
+            label = "number";
+            sensor-bindings = <&scroll_encoder>;
+        };
     };
 };
