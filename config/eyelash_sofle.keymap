@@ -78,11 +78,11 @@
         layer_1 {
             display-name = "win-base";
             bindings = <
-&none                   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &kp LCTRL                &kp TAB        &kp C_PLAY            &kp TAB        &kp RCTRL                     &kp RIGHT_SHIFT  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp DELETE
-&none                   &kp F         &kp P         &kp D           &kp L                    &kp X          &kp LS(LG(NUMBER_2))  &kp SEMICOLON  &kp U                         &kp O            &kp Y          &kp Q          &none
-&mo 5                   &kp S         &kp N         &kp T           &kp H                    &kp K          &kp C_PREVIOUS        &kp COMMA      &kp A                         &kp E            &kp I          &kp C          &mo 5
-&kp LA(LC(LEFT_SHIFT))  &kp V         &kp W         &kp G           &kp M                    &kp J          &kp C_NEXT            &kp MINUS      &kp PERIOD                    &kp SQT          &kp EQUAL      &kp FSLH       &kp RA(RC(RIGHT_SHIFT))
-&kp C_MUTE              &mkp MB1      &kp Z         &kp R           &SandS LEFT_SHIFT SPACE  &lt 4 ENTER    &to 0                 &lt 4 ESCAPE   &SandS RIGHT_SHIFT BACKSPACE  &kp B            &kp GRAVE      &kp BACKSLASH
+&none                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY     		 &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp F11
+&kp GRAVE              &kp N1        &kp N2        &kp N3          &kp N4                 &kp N5           &kp LS(LG(NUMBER_2))  &kp LEFT_BRACE     &kp RIGHT_BRACE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS               &kp SQT
+&none                  &kp EXCL      &kp AT_SIGN   &kp POUND       &kp DOLLAR             &kp PERCENT      &kp C_PREVIOUS        &kp CARET          &kp AMPS           &kp KP_MULTIPLY       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&none 	 			   &none         &kp PLUS      &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp PIPE 2             &trans
+&trans                 &trans        &trans        &trans          &trans                 &trans           &none                 &trans             &trans             &trans                &trans                 &trans                 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
