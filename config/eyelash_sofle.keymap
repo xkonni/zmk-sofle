@@ -115,7 +115,7 @@
 &trans  &trans      &trans     &trans       &trans  &trans    &trans  &trans     &trans            &trans          &trans           &trans  &trans
 &trans  &kp INSERT  &kp PSCRN  &kp SE_PND   &trans  &trans    &trans  &kp PG_UP  &trans            &kp UP_ARROW    &trans           &trans  &kp SE_QUES
 &trans  &trans      &kp CAPS   &kp SE_EUR   &trans  &trans    &trans  &kp PG_DN  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans      &trans     &trans       &trans  &trans    &trans  &trans     k&trans           &trans          &trans           &trans  &trans
+&trans  &trans      &trans     &trans       &trans  &trans    &trans  &trans     &trans            &trans          &trans           &trans  &trans
 &trans  &trans      &trans     &trans       &trans  &trans    &trans  &trans     &trans            &trans          &trans           &trans
             >;
         };
