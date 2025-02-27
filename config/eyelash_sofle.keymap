@@ -114,7 +114,7 @@
             bindings = <
 &trans  &trans      &trans     &trans       &trans     &trans       &trans  &trans     &trans            &trans          &trans           &trans  &trans
 &trans  &kp INSERT  &kp PSCRN  &kp SE_PND   &trans     &trans       &trans  &kp PG_UP  &trans            &kp UP_ARROW    &trans           &trans  &kp SE_QUES
-&trans  &kp K_REDO  &kp CAPS   &kp SE_EUR   &trans     &trans       &trans  &kp PG_DN  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp BSLH
+&trans  &kp K_REDO  &kp CAPS   &kp SE_EUR   &trans     &trans       &trans  &kp PG_DN  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &kp SE_BSLS
 &trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_CUT  &kp K_PASTE  &trans  &trans     &trans            &trans          &trans           &trans  &trans
 &trans  &trans      &trans     &trans       &trans     &trans       &trans  &trans     &trans            &trans          &trans           &trans
             >;
