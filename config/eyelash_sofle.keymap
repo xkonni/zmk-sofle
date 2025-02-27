@@ -92,10 +92,10 @@
 
             display-name = "win-base";
             bindings = <
-&none                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY     		 &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp F11
+&none                  &kp F1        &kp F2        &kp F3          &kp F4                 &kp F5           &kp C_PLAY            &kp F6             &kp F7             &kp F8                &kp F9                 &kp F10                &kp F11
 &kp GRAVE              &kp N1        &kp N2        &kp N3          &kp N4                 &kp N5           &kp LS(LG(NUMBER_2))  &kp LEFT_BRACE     &kp RIGHT_BRACE    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS               &kp SQT
 &none                  &kp EXCL      &kp AT_SIGN   &kp POUND       &kp DOLLAR             &kp PERCENT      &kp C_PREVIOUS        &kp CARET          &kp AMPS           &kp KP_MULTIPLY       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&none 	 			   &none         &kp PLUS      &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp PIPE 2             &trans
+&none                  &none         &kp PLUS      &kp GRAVE       &kp QUESTION           &none            &kp C_NEXT            &none              &kp UNDER          &kp LESS_THAN         &kp PERIOD             &kp PIPE 2             &trans
 &trans                 &trans        &trans        &trans          &trans                 &trans           &none                 &trans             &trans             &trans                &trans                 &trans                 &trans
             >;
 
