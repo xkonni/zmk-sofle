@@ -55,7 +55,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
-  - PRINTSCREEN
+  - $$mdi:printer-outline$$
   - win-base
   - {t: '$$mdi:keyboard-space$$', h: '2'}
   - $$mdi:mouse-left-click-outline$$
