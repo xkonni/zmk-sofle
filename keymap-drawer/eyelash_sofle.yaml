@@ -111,11 +111,11 @@ layers:
   - '?'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:skip-next$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - _
-  - <
-  - .
+  - '|'
+  - Sft+|
   - AltGr+|
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
