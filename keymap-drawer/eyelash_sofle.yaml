@@ -115,7 +115,7 @@ layers:
   - _
   - <
   - .
-  - PIPE 2
+  - '|'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
