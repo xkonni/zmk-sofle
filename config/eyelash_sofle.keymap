@@ -64,11 +64,11 @@
 
         layer_0 {
             bindings = <
-&none              &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_GUI             &kp TAB        &kp C_PLAY            &kp TAB        &kp RIGHT_GUI                 &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp DELETE
-&none              &kp F         &kp P      &kp D           &kp L                    &kp X          &kp LS(LG(NUMBER_2))  &kp SEMICOLON  &kp U                         &kp O            &kp Y      &kp Q          &none
-&mo 5              &kp S         &kp N      &kp T           &kp H                    &kp K          &kp C_PREVIOUS        &kp COMMA      &kp A                         &kp E            &kp I      &kp C          &mo 5
-&kp LA(LC(LSHFT))  &kp V         &kp W      &kp G           &kp M                    &kp J          &kp C_NEXT            &kp MINUS      &kp PERIOD                    &kp SQT          &kp EQUAL  &kp FSLH       &kp RC(RA(RIGHT_SHIFT))
-&kp C_MUTE         &none         &kp Z      &kp R           &SandS LEFT_SHIFT SPACE  &lt 4 ENTER    &to 1                 &lt 4 ESCAPE   &SandS RIGHT_SHIFT BACKSPACE  &kp B            &kp GRAVE  &kp BACKSLASH
+&kp ESCAPE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp N5         &mmv MOVE_Y(-600)  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8       &kp N9        &kp N0         &kp BACKSPACE
+&kp TAB          &kp Q         &kp W         &kp E           &kp R         &kp T          &mmv MOVE_Y(600)   &kp Y         &kp U         &kp I              &kp O         &kp P          &kp LBKT
+&kp LEFT_SHIFT   &kp A         &kp S         &kp D           &kp F         &kp G          &mmv MOVE_X(-600)  &kp H         &kp J         &kp K              &kp L         &kp SEMICOLON  &kp SQT
+&kp LCTRL        &kp Z         &kp X         &kp C           &kp V         &kp B          &mmv MOVE_X(600)   &kp N         &kp M         &kp COMMA          &kp PERIOD    &kp FSLH       &kp RIGHT_SHIFT
+&kp C_MUTE       &kp LEFT_GUI  &kp LEFT_ALT  &kp PSCRN       &mo 1         &lt 2 SPACE    &mkp LCLK    	     &kp RETURN    &mo 2         &kp RIGHT_CONTROL  &kp RIGHT_ALT &kp RIGHT_GUI  
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
