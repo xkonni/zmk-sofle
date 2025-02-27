@@ -66,69 +66,69 @@ layers:
   - RIGHT GUI
   win-base:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-command$$
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:keyboard-tab$$
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
   - PLAY
-  - $$mdi:keyboard-tab$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - RIGHT GUI
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F
-  - P
-  - D
-  - L
-  - X
-  - Sft+Gui+2
-  - {t: ;, s: ':'}
-  - U
-  - O
-  - Y
-  - Q
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - number
-  - S
-  - N
-  - T
-  - H
-  - K
-  - PREVIOUS
-  - {t: ',', s: <}
-  - A
-  - E
-  - I
-  - C
-  - number
-  - Alt+Ctl+$$mdi:apple-keyboard-shift$$
-  - V
-  - W
-  - G
-  - M
-  - J
-  - $$mdi:skip-next$$
-  - {t: '-', s: _}
-  - .
-  - {t: '''', s: '"'}
-  - {t: '=', s: +}
-  - {t: /, s: '?'}
-  - AltGr+Ctl+$$mdi:apple-keyboard-shift$$
-  - $$mdi:volume-off$$
-  - '&mkp MB1'
-  - Z
-  - R
-  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$', type: held}
-  - {t: '$$mdi:keyboard-return$$', h: SP&Fn}
-  - {t: mac-base, h: toggle}
-  - {t: '$$mdi:keyboard-esc$$', h: SP&Fn}
-  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - B
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
   - {t: '`', s: '~'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - Sft+Gui+2
+  - '{'
+  - '}'
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - +
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - PREVIOUS
+  - ^
+  - '&'
+  - KP MULTIPLY
+  - (
+  - )
   - {t: \, s: '|'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - +
+  - {t: '`', s: '~'}
+  - '?'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:skip-next$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - _
+  - <
+  - .
+  - PIPE 2
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   '2':
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -316,10 +316,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - RGB TOG
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -351,7 +351,7 @@ layers:
   - KP 9
   - '*'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 4
   - KP 5
@@ -363,7 +363,7 @@ layers:
   - KP 5
   - KP 6
   - {t: '-', s: _}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Sft+$$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 1
@@ -381,7 +381,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 0
-  - {t: '$$mdi:keyboard-space$$', type: held}
+  - $$mdi:keyboard-space$$
   - RETURN
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:keyboard-esc$$
