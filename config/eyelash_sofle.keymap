@@ -15,15 +15,22 @@
 / {
     behaviors {
         mmv {
-            acceleration-exponent = <1>;    // 1
-            time-to-max-speed-ms = <900>;   // 40
-            delay-ms = <0>;                 // 0
+            acceleration-exponent = <1>;      // 1
+            time-to-max-speed-ms = <900>;    // 40
+            delay-ms = <0>;                   // 0
         };
 
         msc {
-            acceleration-exponent = <1>;    // 0
-            time-to-max-speed-ms = <400>;   // 500
-            delay-ms = <0>;                 // 10
+            acceleration-exponent = <1>;      // 0
+            time-to-max-speed-ms = <400>;      // 500
+            delay-ms = <0>;                   //   10
+        };
+
+        // Add this behavior for ZMK Studio
+        studio_unlock: studio_unlock {
+            compatible = "zmk,behavior-studio-unlock";
+            label = "STUDIO_UNLOCK";
+            #binding-cells = <0>;
         };
     };
 
@@ -88,20 +95,26 @@
         layer_2 {
             display-name = "raise";
 // --------------------------------------------------------------------------------------------------------------------------
-// | NONE        | BT1  | BT2  |  BT3 |  BT4  | BT5   |                | NONE   | NONE   | NONE | NONE | NONE | TRANS       |
+// | NONE        | BT1  | BT2  |  BT3 |  BT4  | BT5   |                | NONE   | NONE   | NONE | NONE | NONE | stdio_unlck |
 // | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | HOME   | PGDN   | PGUP | END  | NONE | TRANS       |
 // | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | LEFT   | DOWN   | UP   | RIGHT| NONE | TRANS       |
-// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |       || MOUSE | LBKT   | RBKT   | LBRC | RBRC | BSLH | LS(BSLH)    |
+// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |       || MOUSE | LBKT   | RBKT   | LBRC | RBRC | BSLH | PIPE        |
 //                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
 
             bindings = <
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP      &trans      &trans      &trans      &trans      &trans      &trans
+&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP      &trans      &trans      &trans      &trans      &trans      &studio_unlock
 &trans      &none         &none         &none         &none         &none         &mmv MOVE_DOWN    &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &trans      &trans
 &trans      &none         &none         &none         &none         &none         &mmv MOVE_LEFT    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-&trans      &none         &none         &none         &none         &none         &mmv MOVE_RIGHT   &kp LBKT    &kp RBKT    &kp LBRC    &kp RBRC    &trans    &trans
-&none       &none         &none         &trans        &trans        &trans        &mkp LCLK         &mkp RCLK   &trans      &mkp MCLK   &none       &none
+&trans      &none         &none         &none         &none         &none         &mmv MOVE_RIGHT   &kp LBKT    &kp RBKT    &kp LBRC    &kp RBRC    &kp BSLH    &kp PIPE
+&none       &none         &none         &trans        &trans        &trans        &mkp LCLK         &mkp RCLK   &trans      &mkp MCLK   &none       &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+        layer_3 {
+            status = "reserved";
+        };
+        layer_4 {
+            status = "reserved";
         };
     };
 };
