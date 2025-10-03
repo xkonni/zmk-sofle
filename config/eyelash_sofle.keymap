@@ -15,15 +15,15 @@
 / {
     behaviors {
         mmv {
-            acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <900>;    // 40
-            delay-ms = <0>;                   // 0
+            acceleration-exponent = <1>;
+            time-to-max-speed-ms = <900>;
+            delay-ms = <0>;
         };
 
         msc {
-            acceleration-exponent = <1>;      // 0
-            time-to-max-speed-ms = <400>;      // 500
-            delay-ms = <0>;                   //   10
+            acceleration-exponent = <1>;
+            time-to-max-speed-ms = <400>;
+            delay-ms = <0>;
         };
 
         // Add this behavior for ZMK Studio
@@ -34,23 +34,72 @@
         };
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+    combos {
+        compatible = "zmk,combos";
+        require-prior-idle-ms = <50>;
+        timeout-ms = <50>;
 
-        tap-ms = <30>;
-    };
+        // Left Hand
+        combo_lpar {                      // e+r = (
+            key-positions = <16 17>;      // E is 16, R is 17
+            bindings = <&kp LPAR>;
+        };
+        combo_lbrk {                      // d+f = [
+            key-positions = <29 30>;      // D is 29, F is 30
+            bindings = <&kp LBKT>;
+        };
+        combo_lbrc {                      // c+v = {
+            key-positions = <42 43>;      // C is 42, V is 43
+            bindings = <&kp LBRC>;
+        };
+        combo_less {                      // r+t = <
+            key-positions = <17 18>;      // R is 17, T is 18
+            bindings = <&kp LT>;
+        };
+        combo_equal {                     // f+g = =
+            key-positions = <30 31>;      // F is 30, G is 31
+            bindings = <&kp EQUAL>;
+        };
+        combo_plus {                      // v+b = +
+            key-positions = <43 44>;      // V is 43, B is 44
+            bindings = <&kp PLUS>;
+        };
 
-    SandS: SandS {
-        compatible = "zmk,behavior-hold-tap";
-        label = "SANDS";
-        bindings = <&kp>, <&kp>;
+        // Right Hand
+        combo_greater {                   // y+u = >
+            key-positions = <20 21>;      // Y is 20, U is 21
+            bindings = <&kp GT>;
+        };
+        combo_rpar {                      // u+i = )
+            key-positions = <21 22>;      // U is 21, I is 22
+            bindings = <&kp RPAR>;
+        };
+        combo_rbrk {                      // j+k = ]
+            key-positions = <34 35>;      // J is 34, K is 35
+            bindings = <&kp RBKT>;
+        };
+        combo_rbrc {                      // m+, = }
+            key-positions = <47 48>;      // M is 47, COMMA is 48
+            bindings = <&kp RBRC>;
+        };
+        combo_minus {                     // h+j = -
+            key-positions = <33 34>;      // H is 33, J is 34
+            bindings = <&kp MINUS>;
+        };
+        combo_under {                     // n+m = _
+            key-positions = <46 47>;      // N is 46, M is 47
+            bindings = <&kp UNDER>;
+        };
 
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        flavor = "hold-preferred";
-        retro-tap;
+        // New combos per your request
+        combo_pipe_comma_period {         // ,+. = |
+            key-positions = <48 49>;      // COMMA is 48, PERIOD is 49
+            bindings = <&kp PIPE>;
+        };
+        combo_bslash_period_slash {       // .+/ = backslash
+            key-positions = <49 50>;      // PERIOD is 49, SLASH is 50
+            bindings = <&kp BSLH>;
+        };
     };
 
     keymap {
