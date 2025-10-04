@@ -33,7 +33,7 @@ layers:
   - D
   - F
   - G
-  - PLAY
+  - PLAY PAUSE
   - H
   - J
   - K
@@ -195,3 +195,32 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [16, 17]
+  k: (
+- p: [29, 30]
+  k: {t: '[', s: '{'}
+- p: [42, 43]
+  k: '{'
+- p: [17, 18]
+  k: <
+- p: [30, 31]
+  k: {h: '=', s: +}
+- p: [43, 44]
+  k: +
+- p: [20, 21]
+  k: '>'
+- p: [21, 22]
+  k: )
+- p: [34, 35]
+  k: {t: ']', s: '}'}
+- p: [47, 48]
+  k: '}'
+- p: [33, 34]
+  k: {h: '-', s: _}
+- p: [46, 47]
+  k: _
+- p: [48, 49]
+  k: '|'
+- p: [49, 50]
+  k: {t: \, s: '|'}
