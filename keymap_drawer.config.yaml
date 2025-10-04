@@ -96,6 +96,24 @@ draw_config:
       visibility: hidden;
     }
 
+    /* Add extra padding to layer header by increasing box size and shifting text */
+    .layer_header {
+      height: 60px !important;   /* Increased height for more padding */
+      width: 340px !important;   /* Increased width for more padding */
+      rx: 12px;
+      fill: #cce6ff;
+      stroke: #3399ff;
+      stroke-width: 2px;
+    }
+    .layer_header_text {
+      font-size: 24px !important;
+      font-weight: bold;
+      fill: #003366;
+      dominant-baseline: middle;
+      text-anchor: middle;
+      transform: translate(0px, 8px); /* Shift text down for vertical padding */
+    }
+
   shrink_wide_legends: 6
   glyph_tap_size: 18
   glyph_hold_size: 15
@@ -488,7 +506,7 @@ parse_config:
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
     K_FIND: $$mdi:apple-finder$$
-    # Command + 
+    # Command +
     LG(A):
       tap: 'A'
       hold: $$mdi:apple-keyboard-command$$
