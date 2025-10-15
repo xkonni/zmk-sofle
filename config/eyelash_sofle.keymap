@@ -90,16 +90,6 @@
             key-positions = <46 47>;      // N is 46, M is 47
             bindings = <&kp UNDER>;
         };
-
-        // New combos per your request
-        combo_pipe_comma_period {         // ,+. = |
-            key-positions = <48 49>;      // COMMA is 48, PERIOD is 49
-            bindings = <&kp PIPE>;
-        };
-        combo_bslash_period_slash {       // .+/ = backslash
-            key-positions = <49 50>;      // PERIOD is 49, SLASH is 50
-            bindings = <&kp BSLH>;
-        };
     };
 
     keymap {
@@ -127,15 +117,15 @@
             display-name = "lower";
 // --------------------------------------------------------------------------------------------------------------------------
 // | F12         |  F1  |  F2  |  F3  |  F4   |  F5   |                |  F6    |  F7    |  F8  |  F9  |  F0  | TRANS       |
-// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | NONE   | NONE   | NONE | NONE | NONE | TRANS       |
-// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | MINUS  | EQUAL  | NONE | NONE | NONE | TRANS       |
-// | TRANS       | NONE | NONE | NONE | DEL   | BKSPC |       || MSCRL | UNDRSC | PLUS   | NONE | NONE | NONE | TRANS       |
+// | TRANS       | NONE | NONE | NONE |  (    |  <    |                |  >     |  )     | NONE | NONE | PRINT| TRANS       |
+// | TRANS       | NONE | NONE |  `   |  [    |  =    |                | MINUS  |  ]     | NONE | NONE | NONE | TRANS       |
+// | TRANS       | NONE | NONE |  ~   |  {    |  +    |       || MSCRL |  _     |  }     | NONE | NONE | BSLH | PIPE        |
 //                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
             bindings = <
-&none           &kp F1  &kp F2  &kp F3      &kp F4      &kp F5      &msc SCRL_UP     &kp F6          &kp F7      &kp F8      &kp F9      &kp F10         &trans
-&trans          &none   &none   &none       &none       &none       &msc SCRL_DOWN   &none           &none       &none       &none       &none           &trans
-&trans          &none   &none   &none       &none       &none       &msc SCRL_LEFT   &kp MINUS       &kp EQUAL   &none       &none       &none           &trans
-&trans          &none   &none   &none       &kp DEL     &kp BSPC    &msc SCRL_RIGHT  &kp UNDER       &kp PLUS    &none       &none       &kp PSCRN       &trans
+&none           &kp F1  &kp F2  &kp F3      &kp F4      &kp F5      &msc SCRL_DOWN   &kp F6          &kp F7      &kp F8      &kp F9      &kp F10         &trans
+&trans          &none   &none   &none       &kp LPAR    &kp LT      &msc SCRL_UP     &kp GT          &kp RPAR    &none       &none       &kp PSCRN       &trans
+&trans          &none   &none   &kp GRAVE   &kp LBKT    &kp EQUAL   &msc SCRL_LEFT   &kp MINUS       &kp RBKT    &none       &none       &none           &trans
+&trans          &none   &none   &kp TILDE   &kp LBRC    &kp PLUS    &msc SCRL_RIGHT  &kp UNDER       &kp RBRC    &none       &none       &kp BSLH        &kp PIPE
 &none           &none   &none   &trans      &trans      &trans      &mkp LCLK        &trans          &trans      &trans      &none       &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -144,18 +134,18 @@
         layer_2 {
             display-name = "raise";
 // --------------------------------------------------------------------------------------------------------------------------
-// | NONE        | BT1  | BT2  |  BT3 |  BT4  | BT5   |                | NONE   | NONE   | NONE | NONE | NONE | stdio_unlck |
-// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | HOME   | PGDN   | PGUP | END  | NONE | TRANS       |
+// | NONE        | BT1  | BT2  |  BT3 |  BT4  | BT5   |                | BT CLR | BT_DISC| NONE | NONE | NONE | stdio_unlck |
+// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | NONE   | NONE   | NONE | NONE | NONE | TRANS       |
 // | TRANS       | BRI  | TOG  | BRD  | NONE  | NONE  |                | LEFT   | DOWN   | UP   | RIGHT| NONE | TRANS       |
-// | TRANS       | HUI  | TOG  | HUD  | NONE  | NONE  |       || MOUSE | LBKT   | RBKT   | LBRC | RBRC | BSLH | PIPE        |
+// | TRANS       | HUI  | TOG  | HUD  | NONE  | NONE  |       || MOUSE | HOME   | PGDN   | PGUP | END  | BSLH | PIPE        |
 //                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
 
             bindings = <
-&none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP      &none       &none       &none       &none       &none       &studio_unlock
-&trans      &none         &none         &none         &none         &none         &mmv MOVE_DOWN    &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &none       &trans
-&trans      &rgb_ug RGB_BRI  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &none  &none       &mmv MOVE_LEFT    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &none       &trans
-&trans      &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &none  &none       &mmv MOVE_RIGHT   &kp LBKT    &kp RBKT    &kp LBRC    &kp RBRC    &kp BSLH    &kp PIPE
-&none       &none         &none         &trans        &trans        &trans        &mkp LCLK         &mkp RCLK   &trans      &mkp MCLK   &none       &trans
+&none       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP      &bt BT_CLR      &bt BT_DISC     &none           &none           &none           &studio_unlock
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_DOWN    &none           &none           &none           &none           &none           &trans
+&trans      &rgb_ug RGB_BRI  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &none            &none            &mmv MOVE_LEFT    &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none           &trans
+&trans      &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &none            &none            &mmv MOVE_RIGHT   &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp BSLH        &kp PIPE
+&none       &none            &none            &trans           &trans           &trans           &mkp LCLK         &mkp RCLK       &trans          &mkp MCLK       &none           &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
