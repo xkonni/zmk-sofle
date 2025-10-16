@@ -6,10 +6,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 900   // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200     // default: 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20       // default: 10
 
 / {
     behaviors {
@@ -140,10 +138,10 @@
 //                      | NONE | NONE | DEL   | L3    | BSPC  || TRANS | TRANS  | TRANS  | NONE | NONE |
 
             bindings = <
-&none       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_Y(-600)   &bt BT_CLR      &none           &none           &none           &none           &none
-&trans      &none            &none            &none            &none            &none            &mmv MOVE_Y(600)    &none           &none           &none           &none           &none           &trans
-&trans      &none            &none            &none            &none            &none            &mmv MOVE_X(-600)   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none           &trans
-&trans      &none            &none            &none            &none            &none            &mmv MOVE_X(600)    &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp BSLH        &kp PIPE
+&none       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP        &bt BT_CLR      &none           &none           &none           &none           &none
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_DOWN      &none           &none           &none           &none           &none           &trans
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_LEFT      &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none           &trans
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_RIGHT     &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp BSLH        &kp PIPE
 &none       &none            &none            &kp DELETE       &mo 3            &kp BSPC         &mkp LCLK           &mkp RCLK       &trans          &mkp MCLK       &none           &studio_unlock
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
