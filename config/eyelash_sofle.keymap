@@ -120,13 +120,13 @@
 // | TRANS       | NONE | NONE | NONE |  (    |  <    |                |  >     |  )     | NONE | NONE | PRINT| TRANS       |
 // | TRANS       | NONE | NONE |  `   |  [    |  =    |                | MINUS  |  ]     | NONE | NONE | NONE | TRANS       |
 // | TRANS       | NONE | NONE |  ~   |  {    |  +    |       || MSCRL |  _     |  }     | NONE | NONE | BSLH | PIPE        |
-//                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
+//                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | L3     | TRANS  | NONE | NONE |
             bindings = <
 &kp F12         &kp F1  &kp F2  &kp F3      &kp F4      &kp F5      &msc SCRL_DOWN   &kp F6          &kp F7      &kp F8      &kp F9      &kp F10         &kp F11
 &trans          &none   &none   &none       &kp LPAR    &kp LT      &msc SCRL_UP     &kp GT          &kp RPAR    &none       &none       &kp PSCRN       &trans
 &trans          &none   &none   &kp GRAVE   &kp LBKT    &kp EQUAL   &msc SCRL_LEFT   &kp MINUS       &kp RBKT    &none       &none       &none           &trans
 &trans          &none   &none   &kp TILDE   &kp LBRC    &kp PLUS    &msc SCRL_RIGHT  &kp UNDER       &kp RBRC    &none       &none       &kp BSLH        &kp PIPE
-&none           &none   &none   &trans      &trans      &trans      &mkp LCLK        &trans          &trans      &trans      &none       &none
+&none           &none   &none   &trans      &trans      &trans      &mkp LCLK        &trans          &mo 3       &trans      &none       &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -136,24 +136,37 @@
 // --------------------------------------------------------------------------------------------------------------------
 // | NONE        | BT1  | BT2  |  BT3 |  BT4  | BT5   |                | BT CLR | NONE   | NONE | NONE | NONE | NONE  |
 // | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | NONE   | NONE   | NONE | NONE | NONE | TRANS |
-// | TRANS       | BRI  | TOG  | BRD  | NONE  | NONE  |                | LEFT   | DOWN   | UP   | RIGHT| NONE | TRANS |
-// | TRANS       | HUI  | TOG  | HUD  | NONE  | NONE  |       || MOUSE | HOME   | PGDN   | PGUP | END  | BSLH | PIPE  |
-//                      | NONE | NONE | TRANS | TRANS | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
+// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |                | LEFT   | DOWN   | UP   | RIGHT| NONE | TRANS |
+// | TRANS       | NONE | NONE | NONE | NONE  | NONE  |       || MOUSE | HOME   | PGDN   | PGUP | END  | BSLH | PIPE  |
+//                      | NONE | NONE | TRANS | L3    | TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
 
             bindings = <
 &none       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_Y(-600)   &bt BT_CLR      &none           &none           &none           &none           &none
 &trans      &none            &none            &none            &none            &none            &mmv MOVE_Y(600)    &none           &none           &none           &none           &none           &trans
-&trans      &rgb_ug RGB_BRI  &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &none            &none            &mmv MOVE_X(-600)   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none           &trans
-&trans      &rgb_ug RGB_HUI  &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &none            &none            &mmv MOVE_X(600)    &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp BSLH        &kp PIPE
-&none       &none            &none            &trans           &trans           &trans           &mkp LCLK           &mkp RCLK       &trans          &mkp MCLK       &none           &studio_unlock
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_X(-600)   &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT       &none           &trans
+&trans      &none            &none            &none            &none            &none            &mmv MOVE_X(600)    &kp HOME        &kp PG_DN       &kp PG_UP       &kp END         &kp BSLH        &kp PIPE
+&none       &none            &none            &trans           &mo 3            &trans           &mkp LCLK           &mkp RCLK       &trans          &mkp MCLK       &none           &studio_unlock
             >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
+
         layer_3 {
-            status = "reserved";
-        };
-        layer_4 {
-            status = "reserved";
+            display-name = "rgb";
+// --------------------------------------------------------------------------------------------------------------------
+// | NONE        | DISC0| DISC1| DISC2| DISC3| DISC4 |                | NONE   | NONE   | NONE | NONE | NONE | NONE  |
+// | TRANS       | PREV | SPDUP| NEXT | NONE | NONE  |                | NONE   | NONE   | NONE | NONE | NONE | TRANS |
+// | TRANS       | BRD  | TOG  | BRI  | NONE | NONE  |                | NONE   | NONE   | NONE | NONE | NONE | TRANS |
+// | TRANS       | HUD  | SPDDN| HUI  | NONE | NONE  |       || NONE  | NONE   | NONE   | NONE | NONE | NONE | NONE  |
+//                      | NONE | NONE | TRANS| TRANS| TRANS || TRANS | TRANS  | TRANS  | NONE | NONE |
+
+            bindings = <
+&none       &bt BT_DISC 0    &bt BT_DISC 1    &bt BT_DISC 2    &bt BT_DISC 3    &bt BT_DISC 4    &none               &none           &none           &none           &none           &none           &none
+&trans      &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none            &none            &none               &none           &none           &none           &none           &none           &trans
+&trans      &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &none            &none            &none               &none           &none           &none           &none           &none           &trans
+&trans      &rgb_ug RGB_HUD  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &none            &none            &none               &none           &none           &none           &none           &none           &none
+&none       &none            &none            &trans           &trans           &trans           &none               &trans          &trans          &trans          &none           &none
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
