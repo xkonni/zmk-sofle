@@ -80,8 +80,8 @@ layers:
   - F10
   - F11
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:skip-next$$
-  - $$mdi:volume-high$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (
   - <
@@ -93,8 +93,8 @@ layers:
   - $$mdi:printer-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:play-pause$$
-  - $$mdi:volume-off$$
+  - $$mdi:volume-low$$
+  - $$mdi:volume-high$$
   - {t: '`', s: '~'}
   - {t: '[', s: '{'}
   - {t: '=', s: +}
@@ -107,7 +107,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
-  - $$mdi:volume-low$$
+  - $$mdi:skip-next$$
   - '~'
   - '{'
   - +
@@ -261,27 +261,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [16, 17]
-  k: (
-- p: [29, 30]
-  k: {t: '[', s: '{'}
-- p: [42, 43]
-  k: '{'
-- p: [17, 18]
-  k: <
-- p: [30, 31]
-  k: {h: '=', s: +}
-- p: [43, 44]
-  k: +
-- p: [20, 21]
-  k: '>'
-- p: [21, 22]
-  k: )
-- p: [34, 35]
-  k: {t: ']', s: '}'}
-- p: [47, 48]
-  k: '}'
-- p: [33, 34]
-  k: {h: '-', s: _}
-- p: [46, 47]
-  k: _
+- p: [27, 28]
+  k: $$mdi:volume-off$$
+  l: [LOWER]
+  a: top
+  o: 0.15
+- p: [40, 41]
+  k: PLAY PAUSE
+  l: [LOWER]
